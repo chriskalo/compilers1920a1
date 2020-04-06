@@ -31,10 +31,10 @@ def get_char(text,pos):
 	""" Returns char (or char category) at position `pos` of `text`,
 	or None if out of bounds. """
 	
-	if pos<0 or pos>=len(text): return None
+	if pos <0 or pos >= len(text): return None
 	
 	c = text[pos]
-	
+	if c >= '0' and c <= '9': return 'DIGIT'
 	# (Γ) Προαιρετικά, μπορείτε να ομαδοποιήσετε τους
 	# χαρακτήρες εισόδου εδώ.
 	# Για λεπτομέρειες δείτε στο:
